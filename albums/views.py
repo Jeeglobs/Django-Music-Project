@@ -15,3 +15,24 @@ def list_albums(request):
 def add_album(request):
     form = AlbumForm()
     return render(request, 'albums/add_album.html', {'form': form})
+
+# click on album on homepage -> get_info -> go to page with info
+# -> have links on this page to edit album, delete album, and go back to homepage
+
+
+def edit_album(request):
+    # update existing album and save
+    # POST
+    pass
+
+
+def delete_album(request):
+    # remove album from DB and save
+    # POST
+    pass
+
+
+def get_info(request):
+    # see all information--title, artist, date_created, etc.
+    # GET
+    pass
