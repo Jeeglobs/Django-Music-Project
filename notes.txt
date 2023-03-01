@@ -1,0 +1,1 @@
+added link to add an album in index.html as per Gerardo's example
