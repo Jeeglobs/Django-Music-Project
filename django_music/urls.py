@@ -23,4 +23,9 @@ urlpatterns = [
     path('', views.list_albums, name='home'),
     path('albums/new', views.add_album, name='add_album'),
     # where user visits, what view is called, name used within app to refer to this url
+
+    # paths for view functions and html files not yet written
+    path('albums/<int:pk>', views.get_info, name='get_info'),
+    path('albums/<int:pk>/edit', views.edit_album, name='edit_album'),
+    path('albums/<int:pk>/delete', views.delete_album, name='delete_album')
 ]

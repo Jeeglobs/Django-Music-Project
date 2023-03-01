@@ -22,13 +22,13 @@ def add_album(request):
 
 def edit_album(request):
     # update existing album and save
-    # POST
+    # GET & POST
     pass
 
 
 def delete_album(request):
     # remove album from DB and save
-    # POST
+    # GET & POST
     pass
 
 

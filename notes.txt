@@ -8,3 +8,5 @@ these functions have not been written yet
 
 created edit_album.html, delete_album.html, and get_info.html
 these files are empty but will connect to view functions
+
+created paths for the empty view functions and html files
