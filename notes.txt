@@ -10,3 +10,6 @@ created edit_album.html, delete_album.html, and get_info.html
 these files are empty but will connect to view functions
 
 created paths for the empty view functions and html files
+
+added if loop to add_album in views.py
+as per class example and Gerardo's example
