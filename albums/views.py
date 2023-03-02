@@ -25,10 +25,15 @@ def add_album(request):
 # -> have links on this page to edit album, delete album, and go back to homepage
 
 
-def edit_album(request):
-    # update existing album and save
-    # GET & POST
-    pass
+def edit_album(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    if request.method == 'POST':
+        new_album = AlbumForm(request.POST, instance=todo)
+        if new_album.is_valid():
+            new_album.save()
+            return redirect('home')
+    form = AlbumForm(instance=album)
+    return render(request, 'albums/edti_album.html', {'form': form, 'pk': pk})
 
 
 def delete_album(request):

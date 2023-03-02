@@ -14,6 +14,7 @@
     <h3>Genre: {{ album.genre }}</h3>
     <br>
     <a href='{% url 'home' %}'>Back to Homepage</a>
-    {% comment %} <a href='{% url 'edit_album' %}'>Edit This Album</a> {% endcomment %}
+    <a href='{% url 'edit_album' album.pk %}'>Edit this Album</a>
+    <a href='{% url 'delete_album' album.pk %}'>Delete this Album</a>
 </body>
 </html>
