@@ -20,3 +20,5 @@ this code is currently commented out
 get_info link is working, but I'm struggling with making a new link to edit album from get_info
 
 edit_album link and page are working, my home link from edit is huge for some reason
+
+delete_album page and links are working; still don't know why that one link is so large
