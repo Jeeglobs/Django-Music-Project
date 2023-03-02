@@ -28,12 +28,12 @@ def add_album(request):
 def edit_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
     if request.method == 'POST':
-        new_album = AlbumForm(request.POST, instance=todo)
+        new_album = AlbumForm(request.POST, instance=album)
         if new_album.is_valid():
             new_album.save()
             return redirect('home')
     form = AlbumForm(instance=album)
-    return render(request, 'albums/edti_album.html', {'form': form, 'pk': pk})
+    return render(request, 'albums/edit_album.html', {'form': form, 'pk': pk})
 
 
 def delete_album(request):

@@ -18,3 +18,5 @@ on line 124-126 in settings.py, wrote code needed for CSS styling as per Michael
 this code is currently commented out
 
 get_info link is working, but I'm struggling with making a new link to edit album from get_info
+
+edit_album link and page are working, my home link from edit is huge for some reason
