@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Album
 from .forms import AlbumForm
 
@@ -37,7 +37,6 @@ def delete_album(request):
     pass
 
 
-def get_info(request):
-    # see all information--title, artist, date_created, etc.
-    # GET
-    pass
+def get_info(request, pk):
+    album = get_object_or_404(Album, pk=pk)
+    return render(request, 'albums/get_info.html', {'album': album})

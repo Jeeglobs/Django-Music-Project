@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Album Info</title>
+</head>
+<body>
+    <h1>Album Info</h1>
+    <br>
+    <h2>Title: {{ album.title }}</h2>
+    <h2>Artist: {{ album.artist }}</h2>
+    <h3>Genre: {{ album.genre }}</h3>
+    <br>
+    <a href='{% url 'home' %}'>Back to Homepage</a>
+    {% comment %} <a href='{% url 'edit_album' %}'>Edit This Album</a> {% endcomment %}
+</body>
+</html>

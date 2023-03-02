@@ -13,3 +13,8 @@ created paths for the empty view functions and html files
 
 added if loop to add_album in views.py
 as per class example and Gerardo's example
+
+on line 124-126 in settings.py, wrote code needed for CSS styling as per Michael's example in class.
+this code is currently commented out
+
+get_info link is working, but I'm struggling with making a new link to edit album from get_info

@@ -7,11 +7,12 @@
     <title>Add Album</title>
 </head>
 <body>
-    <h2>Add your albums</h2>
-    <form method='Post'>
+    <h2>Add an Album!</h2>
+    <form method='POST'>
         {% csrf_token %}
         {{ form.as_p }}
         <button type='submit'>Add</button>
     </form>
+    <a href='{% url 'home' %}'>Back to Homepage</a>
 </body>
 </html>
