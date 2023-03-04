@@ -4,9 +4,21 @@ from django.db import models
 
 
 class Album(models.Model):
-    title = models.CharField(max_length=50)
-    artist = models.CharField(max_length=50)
-    genre = models.CharField(max_length=25)
+    title = models.CharField(max_length=100)
+    artist = models.CharField(max_length=100)
+    genre = models.CharField(max_length=50)
+    # CHOICES = (
+    #     ('Pop', 'Pop'),
+    #     ('Rock', 'Rock'),
+    #     ('Metal', 'Metal'),
+    #     ('Hip Hop', 'Hip Hop'),
+    #     ('Classical', 'Classical'),
+    #     ('Country', 'Country'),
+    #     ('Bluegrass', 'Bluegrass'),
+    #     ('Jazz', 'Jazz'),
+    #     ('Electronic', 'Electronic'),
+    # )
+    # genre = models.ChoiceField(choices=CHOICES)
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

@@ -1,0 +1,12 @@
+* {
+    border: 1px solid black;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-card {
+    margin: 10px;
+}

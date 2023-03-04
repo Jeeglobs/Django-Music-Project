@@ -13,9 +13,13 @@
     <h2>My Album Collection:</h2>
     <h3>Click on an item for more info!</h3>
     <br>
-    {% for album in albums %}
-    <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
-    {% endfor %}
+    <div class="album-container">
+      {% for album in albums %}
+        <div class="album-card">
+        <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
+        </div>
+      {% endfor %}
+    </div>
     <br>
     <a href='{% url 'add_album' %}'>Add New Album</a>
   </body>
