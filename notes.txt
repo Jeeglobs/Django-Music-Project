@@ -24,3 +24,5 @@ edit_album link and page are working, my home link from edit is huge for some re
 delete_album page and links are working; still don't know why that one link is so large
 
 added divs to index.html to add flexbox to ablums on homepage; want to add images
+
+added base.html and extended it to all other html files
