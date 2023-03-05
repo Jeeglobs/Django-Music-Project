@@ -16,16 +16,21 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from albums import views
+# from djangocentral.com/uploading-images-with-django
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('__debug__/', include('debug_toolbar.urls')),
     path('', views.list_albums, name='home'),
     path('albums/new', views.add_album, name='add_album'),
-    # where user visits, what view is called, name used within app to refer to this url
-
-    # paths for view functions and html files not yet written
     path('albums/<int:pk>', views.get_info, name='get_info'),
     path('albums/<int:pk>/edit', views.edit_album, name='edit_album'),
     path('albums/<int:pk>/delete', views.delete_album, name='delete_album')
 ]
+# where user visits, what view is called, name used within app to refer to this url
+# added from djangocentral to add images
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)

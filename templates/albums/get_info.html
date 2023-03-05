@@ -3,6 +3,9 @@
 {% block content %}
     <h1>Album Info</h1>
     <br>
+    {% if album.image %}
+        <img src='{{ album.image.url }}' alt='album cover'>
+    {% endif %}
     <h2>Title: {{ album.title }}</h2>
     <h2>Artist: {{ album.artist }}</h2>
     <h3>Genre: {{ album.genre }}</h3>

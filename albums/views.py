@@ -14,21 +14,18 @@ def list_albums(request):
 
 def add_album(request):
     if request.method == 'POST':
-        new_album = AlbumForm(request.POST)
+        new_album = AlbumForm(request.POST, request.FILES)
         if new_album.is_valid():
             new_album.save()
             return redirect('home')
     form = AlbumForm()
     return render(request, 'albums/add_album.html', {'form': form})
 
-# click on album on homepage -> get_info -> go to page with info
-# -> have links on this page to edit album, delete album, and go back to homepage
-
 
 def edit_album(request, pk):
     album = get_object_or_404(Album, pk=pk)
     if request.method == 'POST':
-        new_album = AlbumForm(request.POST, instance=album)
+        new_album = AlbumForm(request.POST, request.FILES, instance=album)
         if new_album.is_valid():
             new_album.save()
             return redirect('home')

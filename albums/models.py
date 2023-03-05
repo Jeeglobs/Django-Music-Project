@@ -8,17 +8,18 @@ class Album(models.Model):
     artist = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
     # CHOICES = (
-    #     ('Pop', 'Pop'),
-    #     ('Rock', 'Rock'),
-    #     ('Metal', 'Metal'),
-    #     ('Hip Hop', 'Hip Hop'),
+    #     ('Bluegrass', 'Bluegrass'),
     #     ('Classical', 'Classical'),
     #     ('Country', 'Country'),
-    #     ('Bluegrass', 'Bluegrass'),
-    #     ('Jazz', 'Jazz'),
     #     ('Electronic', 'Electronic'),
+    #     ('Hip Hop', 'Hip Hop'),
+    #     ('Jazz', 'Jazz'),
+    #     ('Metal', 'Metal'),
+    #     ('Pop', 'Pop'),
+    #     ('Rock', 'Rock'),
     # )
     # genre = models.ChoiceField(choices=CHOICES)
+    image = models.ImageField(upload_to='images', null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):

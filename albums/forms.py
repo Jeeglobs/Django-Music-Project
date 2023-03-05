@@ -1,9 +1,17 @@
 from django import forms
 from .models import Album
+# from .models import Image
 
 
 class AlbumForm(forms.ModelForm):
 
     class Meta:
         model = Album
-        fields = ('title', 'artist', 'genre')
+        fields = ('image', 'title', 'artist', 'genre')
+
+
+# class ImageForm(forms.ModelForm):
+
+#     class Meta:
+#         model = Image
+#         fields = ()
