@@ -8,7 +8,7 @@
       {% for album in albums %}
         <div class="album-card">
           {% if album.image %}
-            <img src='{{ album.image.url }}' alt='album cover'>
+          <a href='{% url 'get_info' album.pk %}'><img src='{{ album.image.url }}' alt='album cover'></a>
           {% endif %}
           <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
         </div>

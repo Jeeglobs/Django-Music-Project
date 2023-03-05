@@ -30,3 +30,5 @@ added base.html and extended it to all other html files
 got image field working and img shows up on detail page
 
 got img to show up on homepage
+
+made imgs on homepage clickable links; working on styling

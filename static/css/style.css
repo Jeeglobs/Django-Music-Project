@@ -1,12 +1,22 @@
 * {
     border: 1px solid black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .album-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .album-card {
-    margin: 10px;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    max-width: 500px;
+    object-fit: cover;
 }
