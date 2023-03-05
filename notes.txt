@@ -28,3 +28,5 @@ added divs to index.html to add flexbox to ablums on homepage; want to add image
 added base.html and extended it to all other html files
 
 got image field working and img shows up on detail page
+
+got img to show up on homepage

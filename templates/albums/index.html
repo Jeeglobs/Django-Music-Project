@@ -7,7 +7,10 @@
     <div class="album-container">
       {% for album in albums %}
         <div class="album-card">
-        <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
+          {% if album.image %}
+            <img src='{{ album.image.url }}' alt='album cover'>
+          {% endif %}
+          <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
         </div>
       {% endfor %}
     </div>
