@@ -5,7 +5,9 @@
 }
 
 .album-card {
+    /* min-width: 150px; */
     width: 200px;
+    /* max-width: 250px; */
     margin: 10px 25px;
     text-align: center;
 }
@@ -17,7 +19,7 @@
 }
 
 .button-container,
-.link-container {
+.navlink-container {
     display: flex;
     justify-content: center;
 }
@@ -27,8 +29,20 @@
     text-align: center;
 }
 
-.link {
+.navlink,
+.navlink:visited {
     margin: 0 15px;
+    color: black;
+}
+
+a,
+a:visited {
+    color: rgb(14, 44, 99);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: rgba(205, 205, 22, 0.961);
 }
 
 h1 {

@@ -34,3 +34,5 @@ got img to show up on homepage
 made imgs on homepage clickable links; working on styling
 
 flex layouts and centering looks good on all pages; could still use more styling
+
+did some styling on links

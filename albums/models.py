@@ -7,6 +7,7 @@ class Album(models.Model):
     title = models.CharField(max_length=100)
     artist = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)
+    # genre = models.ChoiceField(choices=CHOICES)
     # CHOICES = (
     #     ('Bluegrass', 'Bluegrass'),
     #     ('Classical', 'Classical'),
@@ -18,7 +19,8 @@ class Album(models.Model):
     #     ('Pop', 'Pop'),
     #     ('Rock', 'Rock'),
     # )
-    # genre = models.ChoiceField(choices=CHOICES)
+
+    # is upload_to '' doing anything??
     image = models.ImageField(upload_to='images', null=True, blank=True)
     date_created = models.DateTimeField(auto_now_add=True)
 

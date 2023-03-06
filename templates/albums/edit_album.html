@@ -3,6 +3,14 @@
 {% block content %}
     <h1>Edit Album</h1>
     <br>
+
+    {% comment %} taken from get_info.html but doesnt work {% endcomment %}
+    {% if album.image %}
+        <img src='{{ album.image.url }}' alt='album cover'>
+    {% endif %}
+    {% comment %} taken from get_info.html but doesnt work {% endcomment %}
+
+    <br>
     <form method='POST' enctype='multipart/form-data'>
         <div class="form-container">
             {% csrf_token %}
@@ -13,7 +21,7 @@
         </div>
     </form>
     <br>
-    <div class="link-container">
-        <a class="link" href='{% url 'home' %}'>Back to Homepage</a>
+    <div class="navlink-container">
+        <a class="navlink" href='{% url 'home' %}'>Back to Homepage</a>
     </div>
 {% endblock %}

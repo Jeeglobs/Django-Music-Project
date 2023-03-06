@@ -12,9 +12,9 @@
         <h3>Genre: {{ album.genre }}</h3>
     </div>
     <br>
-    <div class="link-container">
-        <a class="link" href='{% url 'home' %}'>Back to Homepage</a>
-        <a class="link" href='{% url 'edit_album' album.pk %}'>Edit this Album</a>
-        <a class="link" href='{% url 'delete_album' album.pk %}'>Delete this Album</a>
+    <div class="navlink-container">
+        <a class="navlink" href='{% url 'home' %}'>Back to Homepage</a>
+        <a class="navlink" href='{% url 'edit_album' album.pk %}'>Edit this Album</a>
+        <a class="navlink" href='{% url 'delete_album' album.pk %}'>Delete this Album</a>
     </div>
 {% endblock %}
