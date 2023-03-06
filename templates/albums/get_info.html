@@ -1,16 +1,20 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Album Info</h1>
+    <h1 class="top-text">Album Info</h1>
     <br>
     {% if album.image %}
         <img src='{{ album.image.url }}' alt='album cover'>
     {% endif %}
-    <h2>Title: {{ album.title }}</h2>
-    <h2>Artist: {{ album.artist }}</h2>
-    <h3>Genre: {{ album.genre }}</h3>
+    <div class="info-container">
+        <h2>Title: {{ album.title }}</h2>
+        <h2>Artist: {{ album.artist }}</h2>
+        <h3>Genre: {{ album.genre }}</h3>
+    </div>
     <br>
-    <a href='{% url 'home' %}'>Back to Homepage</a>
-    <a href='{% url 'edit_album' album.pk %}'>Edit this Album</a>
-    <a href='{% url 'delete_album' album.pk %}'>Delete this Album</a>
+    <div class="link-container">
+        <a class="link" href='{% url 'home' %}'>Back to Homepage</a>
+        <a class="link" href='{% url 'edit_album' album.pk %}'>Edit this Album</a>
+        <a class="link" href='{% url 'delete_album' album.pk %}'>Delete this Album</a>
+    </div>
 {% endblock %}

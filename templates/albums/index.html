@@ -1,19 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1>Album Collection</h1>
-    <h3>Click on an item for more info!</h3>
+    <h1 class="top-text">Album Collection</h1>
+    <h3 class="top-text">Click on an item for more info!</h3>
     <br>
     <div class="album-container">
-      {% for album in albums %}
-        <div class="album-card">
-          {% if album.image %}
-          <a href='{% url 'get_info' album.pk %}'><img src='{{ album.image.url }}' alt='album cover'></a>
-          {% endif %}
-          <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
-        </div>
-      {% endfor %}
+        {% for album in albums %}
+            <div class="album-card">
+                {% if album.image %}
+                    <a href='{% url 'get_info' album.pk %}'><img src='{{ album.image.url }}' alt='album cover'></a>
+                {% endif %}
+                <p><a href='{% url 'get_info' album.pk %}'>{{ album }}</a></p>
+            </div>
+        {% endfor %}
     </div>
     <br>
-    <a href='{% url 'add_album' %}'>Add New Album</a>
+    <div class="link-container">
+        <a class="link" href='{% url 'add_album' %}'>Add New Album</a>
+    </div>
 {% endblock %}
