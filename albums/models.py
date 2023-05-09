@@ -4,21 +4,25 @@ from django.db import models
 
 
 class Album(models.Model):
+    CHOICES = (
+        ('alt-indie', 'Alt/Indie'),
+        ('bluegrass', 'Bluegrass'),
+        ('classical', 'Classical'),
+        ('orchestral', 'Orchestral'),
+        ('country', 'Country'),
+        ('electronic', 'Electronic'),
+        ('hip hop', 'Hip Hop'),
+        ('jazz', 'Jazz'),
+        ('metal', 'Metal'),
+        ('pop', 'Pop'),
+        ('punk', 'Punk'),
+        ('reggae', 'Reggae'),
+        ('rock', 'Rock'),
+        ('soundtrack', 'Soundtrack'),
+    )
     title = models.CharField(max_length=100)
     artist = models.CharField(max_length=100)
-    genre = models.CharField(max_length=50)
-    # genre = models.ChoiceField(choices=CHOICES)
-    # CHOICES = (
-    #     ('Bluegrass', 'Bluegrass'),
-    #     ('Classical', 'Classical'),
-    #     ('Country', 'Country'),
-    #     ('Electronic', 'Electronic'),
-    #     ('Hip Hop', 'Hip Hop'),
-    #     ('Jazz', 'Jazz'),
-    #     ('Metal', 'Metal'),
-    #     ('Pop', 'Pop'),
-    #     ('Rock', 'Rock'),
-    # )
+    genre = models.CharField(choices=CHOICES, max_length=50)
 
     # is upload_to '' doing anything??
     image = models.ImageField(upload_to='images', null=True, blank=True)
